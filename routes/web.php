@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\guest\TrainsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $links = config('store.someLinks');
-    return view('welcome', compact('links'));
-});
+Route::get('/', [TrainsController::class, 'index'] );
 
 Route::get('/otherpage', function () {
     $links = config('store.someLinks');

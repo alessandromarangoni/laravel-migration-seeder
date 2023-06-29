@@ -6,7 +6,31 @@
     <div class="row g-4">
         <div class="col">
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, delectus ad esse illum omnis earum eligendi sint a minus quasi, inventore nulla autem. Maxime voluptatem eligendi veniam voluptates. Soluta, sunt!</p>
+                @foreach ($trains as $item)
+                    <div class="card">
+                        <span class="p-2">
+                            {{$item->company}}
+                        </span>
+                        <span class="p-2">
+                            {{$item->starting_station}}
+                        </span>
+                        <span class="p-2">
+                            {{$item->arrival_station}}
+                        </span>
+                        <span class="p-2">
+                            {{$item->train_code_unique}}
+                        </span>
+                        <span class="p-2">
+                            {{$item->carriages_number}}
+                        </span>
+                        <span class="p-2">
+                            {{$item->in_time}}
+                        </span>
+                        <span class="p-2">
+                            {{$item->deleted}}
+                        </span>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
