@@ -16,13 +16,24 @@ class TrainsTableSeeder extends Seeder
     public function run()
     {
         $trainsArray=[
-            ['company'=>'trenitalia',
-            'starting_station'=> 'rimini',
-            'arrival_station' => 'cesenatico',
-            'train_code_unique'=> 45645646,
-            'carriage_number'=> 12,
-            'in_time'=> 1,
-            'deleted'=> 0]
+            [
+                'company'=>'trenitalia',
+                'starting_station'=> 'rimini',
+                'arrival_station' => 'cesenatico',
+                'train_code_unique'=> 45645646,
+                'carriage_number'=> 12,
+                'in_time'=> 1,
+                'deleted'=> 0
+            ],
+            [
+                'company'=>'regionale lento e senza aria condizionata',
+                'starting_station'=> 'genova',
+                'arrival_station' => 'varazze',
+                'train_code_unique'=> 4562,
+                'carriage_number'=> 12,
+                'in_time'=> 0,
+                'deleted'=> 1
+            ]
         ];
 
         foreach ($trainsArray as $train){
