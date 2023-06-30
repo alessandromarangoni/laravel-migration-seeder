@@ -11,7 +11,7 @@ class TrainsController extends Controller
     public function index(){
 
         $trains = Trains::all();
-
+        $trains->each->delete();
         return view('welcome',compact('trains'));
     }
 }
