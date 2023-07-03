@@ -49,7 +49,7 @@ class TrainsTableSeeder extends Seeder
         //     $newTrain->save();
         // }
 
-        for($i=0; $i < 25; $i++){
+        for($i=0; $i < 10; $i++){
             $newTrain = new Trains();
             $newTrain-> company = $faker->company();
             $newTrain-> starting_station =  $faker->city();
@@ -57,7 +57,7 @@ class TrainsTableSeeder extends Seeder
             $newTrain-> train_code_unique =  $faker->randomNumber(5);
             $newTrain-> carriages_number =  $faker->randomNumber(2);
             $newTrain-> in_time = $faker->numberBetween(0, 1);
-            if ($newTrain->in_time===0) {
+            if ($newTrain->in_time) {
                 $newTrain-> deleted = $faker->numberBetween(0,0);
             }else {
                 $newTrain-> deleted = $faker->numberBetween(0, 1);
